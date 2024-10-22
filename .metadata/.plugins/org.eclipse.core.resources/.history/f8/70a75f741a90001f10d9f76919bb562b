@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO">
+	<Appenders> 
+	<!--  name 은 내가 짓는 것 -->
+		<Console name="console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d - %m%n" />
+		</Console>
+	</Appenders>
+	<Loggers>
+		<Root level="INFO">
+		</Root>
+	</Loggers>
+</Configuration>
