@@ -1,0 +1,8 @@
+console.log("board_detail.js in!!~!");
+console.log(bnoVal);
+
+//등록
+document.getElementById("cmtWritter").addEventListener('click',()=>{
+	
+	
+})

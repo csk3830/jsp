@@ -1,0 +1,2 @@
+console.log("board_detail.js in!!~!");
+console.log(bnoVal);

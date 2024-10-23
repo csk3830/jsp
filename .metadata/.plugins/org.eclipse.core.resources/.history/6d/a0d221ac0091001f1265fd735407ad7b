@@ -1,0 +1,11 @@
+console.log("board_detail.js in!!~!");
+console.log(bnoVal);
+
+//등록 post 
+// 등록 버튼을 누르면 작성자와 댓글 내용의 값을 객체로 생성 => controller로 전송
+document.getElementById("cmtAddBtn").addEventListener('click',()=>{
+	const writer = document.getElementById("cmtWriter").value;
+	const text = document.getElementById("cmtText").value;
+	console.log("글쓴이:"+writer);
+	console.log("내용:"+text);
+})
