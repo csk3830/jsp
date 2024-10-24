@@ -8,7 +8,8 @@
 </head>
 <body>
 	<h1>Board Modify Page</h1>
-	<form action="/brd/update" method="post">
+	<img alt="" src="/_fileUpload/_th_${bvo.imageFile }">
+	<form action="/brd/update" method="post" enctype="multipart/form-data">
 		<input type="hidden" name="bno" value="${bvo.bno }">
 		<table>
 			<tr>
@@ -36,6 +37,15 @@
 				<td><textarea rows="10" cols="50" name="content"> ${bvo.content }</textarea>
 				</td>
 			</tr>
+			<!-- 파일 변경 -->
+			<tr>
+				<th>imageFile</th>
+				<td><input type="hidden" name="imageFile"
+					value="${bvo.imageFile }"> <input type="file"
+					name="imageFile"
+					accept="image/jpg, image/gif, image/jpeg, image/png"></td>
+			</tr>
+
 		</table>
 
 		<!-- 수정버튼을 누르면 내가 수정한 내용을 가지고(form => submit) 컨트롤러로 이동 -->

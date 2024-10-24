@@ -12,4 +12,12 @@
   		select * from comment where bno = #{bno}
   		order by cno desc
   	</select>
+  	<update id="up">
+  		update comment set content = #{content}, regdate = current_timestamp
+  		where cno = #{cno}
+  	</update>
+  	<delete id="del">
+  		delete from comment where cno = #{cno}
+  	</delete>
+  	
   </mapper>

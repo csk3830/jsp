@@ -20,3 +20,7 @@ create table board(
  writer varchar(500) default "unknown",
  regdate datetime default now(),
  primary key(cno));
+ 
+ -- 2024.10.24
+ alter table board add column readCount int default 0;
+ alter table board add column imageFile varchar(500);

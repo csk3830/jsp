@@ -44,5 +44,10 @@ public class BoardServiceImpl implements BoardService {
 	public int delete(int bno) {
 		return bdao.delete(bno);
 	}
+
+	@Override
+	public int addViews(int bno) {
+		return bdao.addViews(bno);
+	}
 	
 }

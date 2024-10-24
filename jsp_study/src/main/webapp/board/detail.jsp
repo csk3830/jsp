@@ -9,6 +9,7 @@
 </head>
 <body>
 	<h1>Board Detail Page</h1>
+	<img alt="" src="/_fileUpload/${bvo.imageFile}">
 	<table>
 
 		<tr>
@@ -22,6 +23,10 @@
 		<tr>
 			<th>writer</th>
 			<td>${bvo.writer }</td>
+		</tr>
+		<tr>
+			<th>views</th>
+			<td>${bvo.readCount }</td>
 		</tr>
 		<tr>
 			<th>regdate</th>
@@ -38,6 +43,7 @@
 	</table>
 	<a href="/brd/modify?bno=${bvo.bno }"><button type="button">update</button></a>
 	<a href="/brd/delete?bno=${bvo.bno }"><button type="button">delete</button></a>
+	<a href="/brd/list"><button type="button">list</button></a>
 	
 	<hr>
 	<!-- comment line -->

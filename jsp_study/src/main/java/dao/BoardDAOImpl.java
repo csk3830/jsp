@@ -61,5 +61,13 @@ public class BoardDAOImpl implements BoardDAO {
 		int isOk = sql.delete("BoardMapper.del",bno);
 		return isOk;
 	}
+
+	@Override
+	public int addViews(int bno) {
+		log.info(">>>> addViews DAO in!!");
+		int isOk = sql.update("BoardMapper.read",bno);
+		if(isOk > 0) sql.commit();
+		return isOk;
+	}
 	
 }
