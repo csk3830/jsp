@@ -17,7 +17,7 @@
 		<!-- name의 값은 VO의 객체의 값과 같아야 함. 필수. -->
 		<input type="text" name="title" placeholder="제목..."><br>
 		writer: <br>
-		<input type="text" name="writer" placeholder="작성자..."><br>
+		<input type="text" name="writer" placeholder="작성자..." value="${ses.id }" readonly="readonly"><br>
 		content: <br>
 		<textarea rows="10" cols="50" name="content" placeholder="내용을 입력하세요."></textarea><br>
 		file:<br>

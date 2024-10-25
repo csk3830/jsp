@@ -59,15 +59,16 @@ public class BoardDAOImpl implements BoardDAO {
 	public int delete(int bno) {
 		log.info(">>>> delete DAO in!!");
 		int isOk = sql.delete("BoardMapper.del",bno);
+		if(isOk>0) sql.commit();
 		return isOk;
 	}
 
 	@Override
-	public int addViews(int bno) {
-		log.info(">>>> addViews DAO in!!");
+	public int readCount(int bno) {
 		int isOk = sql.update("BoardMapper.read",bno);
 		if(isOk > 0) sql.commit();
 		return isOk;
 	}
+
 	
 }

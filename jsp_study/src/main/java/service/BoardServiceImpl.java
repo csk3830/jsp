@@ -46,8 +46,8 @@ public class BoardServiceImpl implements BoardService {
 	}
 
 	@Override
-	public int addViews(int bno) {
-		return bdao.addViews(bno);
+	public int readCount(int bno) {
+		return bdao.readCount(bno);
 	}
 	
 }

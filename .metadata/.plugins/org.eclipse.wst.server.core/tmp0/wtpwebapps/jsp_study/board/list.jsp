@@ -33,6 +33,7 @@
 			</c:forEach>
 		</tbody>
 	</table>
+	<a href="/"><button>home</button></a>
 
 </body>
 </html>

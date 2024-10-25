@@ -9,7 +9,7 @@
 	<!-- parameterType = 매개변수의 객체타입(생략가능), resultType = 결과로 나가는 객체 -->
 	<!-- 실제 SQL 구문사용 -->
 	<insert id="add" parameterType="domain.BoardVO">
-	<!-- insertFile 추가 -->
+	<!-- imageFile 추가 -->
 		insert into board(title, writer, content, imageFile)
 		values(#{title}, #{writer}, #{content}, #{imageFile})
 	</insert>
@@ -32,7 +32,7 @@
 		where bno = #{bno}
 	</update>
 
-	<delete id="del" parameterType="domain.BoardVO">
+	<delete id="del" parameterType="int">
 		delete from board where bno = #{bno}
 	</delete>
 

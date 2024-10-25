@@ -49,7 +49,7 @@
 	<!-- comment line -->
 	<div>
 		<h3>Comment Line</h3>
-		<input type="text" id="cmtWriter" placeholder="writer..."><br>
+		<input type="text" id="cmtWriter" placeholder="writer..." value="${ses.id }" readonly="readonly"><br>
 		<input type="text" id="cmtText" placeholder="Add Comment...">
 		<button type="button" id="cmtAddBtn">post</button>
 	</div>

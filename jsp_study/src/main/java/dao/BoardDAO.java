@@ -16,6 +16,6 @@ public interface BoardDAO {
 
 	int delete(int bno);
 
-	int addViews(int bno);
+	int readCount(int bno);
 
 }

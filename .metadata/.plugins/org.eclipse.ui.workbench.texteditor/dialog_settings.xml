@@ -3,6 +3,9 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="getReal"/>
+		<item value="FileRemoveHandler"/>
+		<item value="item.getSize"/>
 		<item value="delete"/>
 		<item value="cno"/>
 		<item value="commentLine"/>
@@ -13,7 +16,9 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
+		<item key="selection" value=""/>
 		<list key="findhistory">
+			<item value="disk"/>
 		</list>
 		<list key="replacehistory">
 		</list>

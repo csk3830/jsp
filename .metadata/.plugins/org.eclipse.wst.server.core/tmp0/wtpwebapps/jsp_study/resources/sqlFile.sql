@@ -24,3 +24,13 @@ create table board(
  -- 2024.10.24
  alter table board add column readCount int default 0;
  alter table board add column imageFile varchar(500);
+ 
+ -- 2024.10.25
+ create table member(
+id varchar(100) pk,
+pwd varchar(100) not null,
+email varchar(200) not null,
+phone varchar(50),
+regdate datetime default now(),
+lastlogin datetime default now(),
+primary key(id));

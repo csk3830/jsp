@@ -40,10 +40,9 @@
 			<!-- 파일 변경 -->
 			<tr>
 				<th>imageFile</th>
-				<td><input type="hidden" name="imageFile"
-					value="${bvo.imageFile }"> <input type="file"
-					name="imageFile"
-					accept="image/jpg, image/gif, image/jpeg, image/png"></td>
+				<td>
+				<input type="hidden" name="imageFile" value="${bvo.imageFile }"> 
+				<input type="file" name="newFile" accept="image/jpg, image/gif, image/jpeg, image/png"></td>
 			</tr>
 
 		</table>
