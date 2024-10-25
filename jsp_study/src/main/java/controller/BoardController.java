@@ -9,6 +9,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.apache.commons.fileupload.FileItem;
 import org.apache.commons.fileupload.disk.DiskFileItemFactory;
@@ -17,6 +18,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import domain.BoardVO;
+import domain.MemberVO;
 import handler.FileRemoveHandler;
 import net.coobird.thumbnailator.Thumbnails;
 import service.BoardService;
@@ -298,9 +300,19 @@ public class BoardController extends HttpServlet {
 				e.printStackTrace();
 			}
 			break;
+		case "mylist":
+			try {
+				HttpSession ses = request.getSession();
+				String id = ((MemberVO)ses.getAttribute("ses")).getId();
+				List<BoardVO> myList = bsv.getMyList(id);
+				request.setAttribute("list", myList);
+				destPage = "/board/list.jsp";
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			break;
 		}
 		
-		// 처리 완료 후
 		// 목적지 주소(destPage)로 데이터를 전달(RequestDispatcher)
 		rdp = request.getRequestDispatcher(destPage);
 		// 요청에 필요한 객체를 가지고 destPage에 적힌 경로로 이동

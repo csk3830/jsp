@@ -3,6 +3,11 @@
 	<item key="hasShownOverlayPopupBefore" value="true"/>
 	<item key="replaceBarOpen" value="false"/>
 	<list key="searchhistory">
+		<item value="mySelect"/>
+		<item value="-1"/>
+		<item value="msg_login"/>
+		<item value="75"/>
+		<item value="update"/>
 		<item value="getReal"/>
 		<item value="FileRemoveHandler"/>
 		<item value="item.getSize"/>

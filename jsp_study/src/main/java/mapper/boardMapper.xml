@@ -39,5 +39,10 @@
 	<update id="read">
 		update board set readCount = readCount + 1 where bno = #{bno}
 	</update>
+	
+	<select id="my" resultType="domain.BoardVO">
+		select * from board where writer = #{id}
+		order by bno desc
+	</select>
 
 </mapper>

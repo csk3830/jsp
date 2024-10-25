@@ -34,7 +34,7 @@
 			<c:if test="${ses.id eq 'admin' }">
 				<a href="/mem/list"><button type="button">회원리스트</button></a>
 			</c:if>
-			<a href="/mem/mySelect"><button type="button">내가 쓴 글 보기</button></a>
+			<a href="/mem/mylist"><button type="button">내가 쓴글 보기</button></a>
 			<a href="/mem/logout"><button type="button">logout</button></a>
 			<a href="/mem/delete"><button type="button">회원 탈퇴</button></a>
 
@@ -50,8 +50,16 @@
 	
 	<script type="text/javascript">
 		const msg_login = `<c:out value="${msg_login}" />`;
-		if(msg_login == -1){
+		if(msg_login == '-1'){
 			alert('로그인 정보가 일치하지 않습니다.');
+		}
+		const msg_update = `<c:out value="${msg_update}" />`;
+		if(msg_update == 'fail'){
+			alert("회원정보가 수정되지 않습니다.");
+		}
+		const msg_delete = `<c:out value="${msg_delete}" />`;
+		if(msg_delete == 'ok'){
+			alert("회원 탈퇴가 완료되었습니다.");
 		}
 	</script>
 </body>
